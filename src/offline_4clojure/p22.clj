@@ -6,8 +6,17 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  #(reduce (fn [x _] (inc x)) 0 %))
+
+#_(def __
+  ; Recursive version
+  (fn my-count
+    ([coll]
+     (my-count coll 0))
+    ([coll cnt]
+     (if (empty? coll)
+       cnt
+       (recur (rest coll) (inc cnt))))))
 
 (defn -main []
   (are [soln] soln
@@ -15,5 +24,4 @@
 (= (__ "Hello World") 11)
 (= (__ [[1 2] [3 4] [5 6]]) 3)
 (= (__ '(13)) 1)
-(= (__ '(:a :b :c)) 3)
-))
+(= (__ '(:a :b :c)) 3)))
