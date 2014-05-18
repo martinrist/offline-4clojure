@@ -6,12 +6,11 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  (fn [name] (str "Hello, " name "!"))
 )
 
 (defn -main []
   (are [soln] soln
 (= (__ "Dave") "Hello, Dave!")
 (= (__ "Jenn") "Hello, Jenn!")
-(= (__ "Rhea") "Hello, Rhea!")
-))
+(= (__ "Rhea") "Hello, Rhea!")))

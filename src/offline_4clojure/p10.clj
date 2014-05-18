@@ -6,11 +6,10 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  20
 )
 
 (defn -main []
   (are [soln] soln
 (= __ ((hash-map :a 10, :b 20, :c 30) :b))
-(= __ (:b {:a 10, :b 20, :c 30}))
-))
+(= __ (:b {:a 10, :b 20, :c 30}))))

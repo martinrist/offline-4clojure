@@ -6,10 +6,8 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  [6 7])
 
 (defn -main []
   (are [soln] soln
-(= __ (filter #(> % 5) '(3 4 5 6 7)))
-))
+(= __ (filter #(> % 5) '(3 4 5 6 7)))))

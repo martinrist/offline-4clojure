@@ -6,11 +6,9 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  #{:a :b :c :d})
 
 (defn -main []
   (are [soln] soln
 (= __ (set '(:a :a :b :c :c :c :c :d :d)))
-(= __ (clojure.set/union #{:a :b :c} #{:b :c :d}))
-))
+(= __ (clojure.set/union #{:a :b :c} #{:b :c :d}))))

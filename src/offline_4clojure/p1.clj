@@ -6,10 +6,8 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  true)
 
 (defn -main []
   (are [soln] soln
-(= __ true)
-))
+(= __ true)))

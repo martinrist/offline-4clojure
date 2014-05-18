@@ -6,10 +6,8 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  [:b 2])
 
 (defn -main []
   (are [soln] soln
-(= {:a 1, :b 2, :c 3} (conj {:a 1} __ [:c 3]))
-))
+(= {:a 1, :b 2, :c 3} (conj {:a 1} __ [:c 3]))))

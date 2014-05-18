@@ -6,10 +6,9 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  [20 30 40]
 )
 
 (defn -main []
   (are [soln] soln
-(= __ (rest [10 20 30 40]))
-))
+(= __ (rest [10 20 30 40]))))
