@@ -6,12 +6,10 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  (comp first reverse))
 
 (defn -main []
   (are [soln] soln
 (= (__ [1 2 3 4 5]) 5)
 (= (__ '(5 4 3)) 3)
-(= (__ ["b" "c" "d"]) "d")
-))
+(= (__ ["b" "c" "d"]) "d")))
