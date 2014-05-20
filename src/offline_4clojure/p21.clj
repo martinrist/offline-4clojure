@@ -11,7 +11,7 @@
     (first (drop n coll)))
   )
 
-(def __
+#_(def __
   ; Recursive version
   (fn rec-nth
     ([coll n]
