@@ -6,8 +6,34 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  (fn [coll]
+    (filter odd? coll)))
+
+; Recursive version
+(def __
+  (fn filter-odd
+    ([acc coll]
+     (if (empty? coll)
+       acc
+       (let [f (first coll)]
+         (if (odd? f)
+           (recur (conj acc f) (rest coll))
+           (recur acc (rest coll))))))
+    ([coll]
+     (filter-odd [] coll))))
+
+
+; Lazy-sequence
+(def __
+  (fn filter-odd
+    [coll]
+    (lazy-seq
+      (if-let [f (first coll)]
+        (let [r (rest coll)]
+          (if (odd? f)
+            (cons f (filter-odd r))
+            (filter-odd r)))))))
+
 
 (defn -main []
   (are [soln] soln
