@@ -6,8 +6,18 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  (fn [coll]
+    (reduce + coll)))
+
+; Recursive version
+(def __
+  (fn sum-up
+    ([acc coll]
+     (if (empty? coll)
+       acc
+       (recur (+ acc (first coll)) (rest coll))))
+    ([coll]
+     (sum-up 0 coll))))
 
 (defn -main []
   (are [soln] soln
