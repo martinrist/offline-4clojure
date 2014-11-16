@@ -6,8 +6,11 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  (fn [n]
+    (->> [1 1]
+         (iterate (fn [[a b]] [b (+ a b)]))
+         (take n)
+         (map first))))
 
 (defn -main []
   (are [soln] soln
