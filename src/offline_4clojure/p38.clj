@@ -6,7 +6,7 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  (fn [& args] (->> args vec sort last))
 )
 
 (defn -main []
