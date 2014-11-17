@@ -6,8 +6,20 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  "This attempt fails for n = 1 with an ArityException, so it's no good."
+  (fn [coll n]
+    (apply interleave (repeat n coll))))
+
+(def __
+  "4clojure1's solution - apply concat map better as mapcat."
+  (fn [coll n]
+    (apply concat (map #(repeat n %) coll))))
+
+(def __
+  "My solution."
+  (fn [coll n]
+    (mapcat #(repeat n %) coll)))
+
 
 (defn -main []
   (are [soln] soln
