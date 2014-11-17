@@ -6,7 +6,12 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  "4clojure1's solution - nice use of interleave"
+  #(interleave % %))
+
+(def __
+  "My solution - slightly less clean."
+  (partial mapcat #(repeat 2 %))
 )
 
 (defn -main []
