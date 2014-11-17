@@ -6,8 +6,9 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  (fn [start end]
+    (->> (iterate inc start)
+         (take (- end start)))))
 
 (defn -main []
   (are [soln] soln
