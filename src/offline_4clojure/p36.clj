@@ -6,8 +6,12 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  "This doesn't compile, but it's the correct answer for 4clojure."
+  (comment
+   [z 1
+    y 3
+    x 7])
+  )
 
 (defn -main []
   (are [soln] soln
