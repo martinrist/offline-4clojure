@@ -6,7 +6,14 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  "4clojure1's solution - using re-seq"
+  #(apply str (re-seq #"[A-Z]" %))
+  )
+
+(def __
+  "My solution - filtering using Character.isUpperCase()"
+  (fn [s]
+    (apply str (filter #(Character/isUpperCase %) s)))
 )
 
 (defn -main []
