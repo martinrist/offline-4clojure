@@ -6,7 +6,8 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  "My solution - same as 4clojure1's"
+  #(map first (partition-by identity %))
 )
 
 (defn -main []
