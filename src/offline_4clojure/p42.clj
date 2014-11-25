@@ -6,8 +6,19 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  "Simple recursive factorial implementation"
+  (fn fact [n]
+    (if (= n 1)
+      1
+      (* n (fact (dec n))))))
+
+(def __
+  "Alternative version using loop / recur"
+  (fn fact [n]
+      (loop [count n acc 1]
+        (if (zero? count)
+          acc
+          (recur (dec count) (* count acc))))))
 
 (defn -main []
   (are [soln] soln

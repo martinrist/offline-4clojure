@@ -6,8 +6,9 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  "My version - partition requires specification of 'nil' to pad last partition"
+  (fn [coll n]
+    (mapcat drop-last (partition n n '(nil) coll))))
 
 (defn -main []
   (are [soln] soln

@@ -6,8 +6,18 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  "My initial solution."
+  (fn [coll1 coll2]
+    (mapcat #(vector %1 %2) coll1 coll2))
 )
+
+(def __
+  "Slightly tidier - we don't need the explicit function literal..."
+  (partial mapcat #(vector %1 %2)))
+
+(def __
+  "... nor do we need %1 and %2"
+  (partial mapcat vector))
 
 (defn -main []
   (are [soln] soln
