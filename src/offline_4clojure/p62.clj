@@ -6,8 +6,11 @@
   (:use clojure.test))
 
 (def __
+  (fn my-iterate [f x]
+    (lazy-seq
+      (cons x (my-iterate f (f x))))))
+
 ;; your solution here
-)
 
 (defn -main []
   (are [soln] soln

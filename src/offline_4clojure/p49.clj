@@ -6,8 +6,17 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  "4clojure1's solution - works, but can be easier by using juxt"
+  (fn [n coll]
+    [(take n coll) (drop n coll)])
+
+  )
+
+(def __
+  "My solution - this returns a 2-arity function whose signature is the same
+  as take and drop"
+  (juxt take drop)
+  )
 
 (defn -main []
   (are [soln] soln

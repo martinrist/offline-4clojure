@@ -6,8 +6,7 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  #(into {} (map vector %1 %2)))
 
 (defn -main []
   (are [soln] soln

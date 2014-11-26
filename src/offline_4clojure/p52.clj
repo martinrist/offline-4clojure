@@ -6,7 +6,8 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  "My solution.  This isn't going to compile, but it's the right answer."
+  [c e]
 )
 
 (defn -main []
