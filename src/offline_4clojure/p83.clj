@@ -6,8 +6,10 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  (fn [& args]
+    (and
+      (true? (some identity args))
+      (not-every? identity args))))
 
 (defn -main []
   (are [soln] soln

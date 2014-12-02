@@ -6,8 +6,14 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  (fn [f s]
+    (apply merge-with concat
+           (map (fn [x] (hash-map (f x) [x])) s))))
+
+(def __
+  (fn [f s]
+    (apply merge-with concat
+           (map (fn [x] {(f x) [x]}) s))))
 
 (defn -main []
   (are [soln] soln

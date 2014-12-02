@@ -10,8 +10,6 @@
     (lazy-seq
       (cons x (my-iterate f (f x))))))
 
-;; your solution here
-
 (defn -main []
   (are [soln] soln
 (= (take 5 (__ #(* 2 %) 1)) [1 2 4 8 16])

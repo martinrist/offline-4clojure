@@ -6,8 +6,15 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  (fn [coll1 coll2]
+    (into #{} (for [c1 coll1
+                    c2 coll2]
+                [c1 c2])))
 )
+
+(def __
+  #(set (for [a %1
+              b %2] [a b])))
 
 (defn -main []
   (are [soln] soln

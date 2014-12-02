@@ -3,11 +3,13 @@
 ;; tags - set-theory
 ;; restricted - 
 (ns offline-4clojure.p88
-  (:use clojure.test))
+  (:use clojure.test)
+  (:require clojure.set))
 
 (def __
-;; your solution here
-)
+  (fn [s1 s2]
+    (clojure.set/difference (clojure.set/union s1 s2)
+                            (clojure.set/intersection s1 s2))))
 
 (defn -main []
   (are [soln] soln
