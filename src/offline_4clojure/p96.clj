@@ -5,13 +5,26 @@
 (ns offline-4clojure.p96
   (:use clojure.test))
 
-(defn flip-tree [[val left right]]
-  (if (and (sequential? left)
-           (sequential? right))
-    [val (flip-tree right) (flip-tree left)]
-    [val right left]))
+(defn flip-tree [[val left right :as node]]
+  (if (nil? node)
+    nil
+    (if (and (sequential? left)
+             (sequential? right))
+      [val (flip-tree right) (flip-tree left)]
+      [val right left])))
 
 
+(defn flip-node [[val left right :as node]]
+  (cond
+    (nil? node)         nil
+    (not (sequential?))
+    (sequential? node)  (flip-node node)
+    :else               node
+    )
+
+
+
+  )
 
 (def __
   (fn [tree]
