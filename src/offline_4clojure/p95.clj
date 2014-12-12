@@ -6,7 +6,14 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  (fn tree? [[val left right :as node]]
+    (and (= (count node) 3)
+         (or (nil? left)
+             (and (sequential? left)
+                  (tree? left)))
+         (or (nil? right)
+             (and (sequential? right)
+                  (tree? right)))))
 )
 
 (defn -main []

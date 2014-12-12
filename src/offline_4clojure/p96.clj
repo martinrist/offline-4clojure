@@ -5,9 +5,25 @@
 (ns offline-4clojure.p96
   (:use clojure.test))
 
+(defn flip-tree [[val left right]]
+  (if (and (sequential? left)
+           (sequential? right))
+    [val (flip-tree right) (flip-tree left)]
+    [val right left]))
+
+
+
 (def __
-;; your solution here
-)
+  (fn [tree]
+    (= tree (flip-tree tree))
+
+    )
+
+
+  )
+
+
+
 
 (defn -main []
   (are [soln] soln
