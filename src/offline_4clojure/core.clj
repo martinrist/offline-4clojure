@@ -1,14 +1,11 @@
 (ns offline-4clojure.core
   (:require [clj-http.client :as http]
             [clojure.string :as string]
-
-            )
-  (:use [cheshire.core]
-        [clojure.pprint]))
+            [cheshire.core :as ch]))
 
 (defn fetch-problem-data [n]
   (println "fetching" n)
-  (parse-string
+  (ch/parse-string
    (:body
     (http/get (str "http://www.4clojure.com/api/problem/" n)))))
 
