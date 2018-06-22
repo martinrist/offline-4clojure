@@ -6,11 +6,20 @@
 (ns offline-4clojure.p6
   (:use clojure.test))
 
-(def __
-;; your solution here
+(def _1
+  :a
 )
+
+(def _2
+  :b
+  )
+
+(def _3
+  :c
+  )
+
 
 (defn -main []
   (are [soln] soln
-(= [__] (list :a :b :c) (vec '(:a :b :c)) (vector :a :b :c))
+(= [_1 _2 _3] (list :a :b :c) (vec '(:a :b :c)) (vector :a :b :c))
 ))

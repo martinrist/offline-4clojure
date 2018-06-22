@@ -5,11 +5,16 @@
 (ns offline-4clojure.p4
   (:use clojure.test))
 
-(def __
-;; your solution here
-)
+(def _1
+  :a)
+
+(def _2
+  :b)
+
+(def _3
+  :c)
 
 (defn -main []
   (are [soln] soln
-(= (list __) '(:a :b :c))
+(= (list _1 _2 _3) '(:a :b :c))
 ))

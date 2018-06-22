@@ -6,7 +6,8 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  (fn [k m]
+    (nil? (get m k :not-found)))
 )
 
 (defn -main []

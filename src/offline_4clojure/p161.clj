@@ -3,10 +3,11 @@
 ;; tags - set-theory
 ;; restricted - 
 (ns offline-4clojure.p161
+  (:require clojure.set)
   (:use clojure.test))
 
 (def __
-;; your solution here
+  #{1 2 3}
 )
 
 (defn -main []

@@ -6,8 +6,9 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  (comment "Won't compile but works for 4Clojure"
+           [c e])
+  )
 
 (defn -main []
   (are [soln] soln

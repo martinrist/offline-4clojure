@@ -6,7 +6,8 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  (fn [v ks]
+    (zipmap ks (repeat v)))
 )
 
 (defn -main []

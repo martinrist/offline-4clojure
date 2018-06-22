@@ -6,6 +6,7 @@
   (:use clojure.test))
 
 (def __
+  #(str "Hello, " % "!")
 ;; your solution here
 )
 
