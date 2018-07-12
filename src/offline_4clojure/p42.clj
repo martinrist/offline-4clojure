@@ -6,6 +6,7 @@
   (:use clojure.test))
 
 (def __
+  #(apply * (range 1 (inc %)))
 ;; your solution here
 )
 

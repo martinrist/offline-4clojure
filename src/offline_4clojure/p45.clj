@@ -6,6 +6,7 @@
   (:use clojure.test))
 
 (def __
+  '(1 4 7 10 13)
 ;; your solution here
 )
 

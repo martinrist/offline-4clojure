@@ -8,6 +8,20 @@
 
 (def __
 ;; your solution here
+
+  (fn gcd [a b]
+    (loop [a' (max a b)
+           b' (min a b)]
+      (let [r (rem b' a')]
+        (if (zero? r)
+          r
+          (recur b' r)))))
+
+
+  ;If a<b, exchange a and b.
+  ;Divide a by b and get the remainder, r. If r=0, report b as the GCD of a and b.
+  ;Replace a by b and replace b by r. Return to the previous step.
+  ;
 )
 
 (defn -main []

@@ -6,7 +6,7 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  #(drop 1 (interleave (repeat %1) %2))
 )
 
 (defn -main []

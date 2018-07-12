@@ -6,8 +6,9 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  (fn [coll n]
+    (for [i (range n)]
+      (take-nth n (drop i coll)))))
 
 (defn -main []
   (are [soln] soln

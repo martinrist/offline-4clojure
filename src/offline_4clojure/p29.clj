@@ -6,7 +6,7 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  (comp (partial apply str) (partial re-seq #"[A-Z]"))
 )
 
 (defn -main []

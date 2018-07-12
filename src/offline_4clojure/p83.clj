@@ -6,7 +6,10 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  (fn [& args]
+    (and (not-every? false? args)
+         (not (every? true? args)))
+    )
 )
 
 (defn -main []

@@ -6,8 +6,9 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  #(mapcat (partial repeat %2) %1)
+  )
+
 
 (defn -main []
   (are [soln] soln

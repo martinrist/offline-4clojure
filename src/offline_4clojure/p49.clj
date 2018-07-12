@@ -6,8 +6,8 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  (juxt take drop)
+  )
 
 (defn -main []
   (are [soln] soln

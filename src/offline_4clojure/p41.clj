@@ -6,8 +6,10 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+  (fn [coll n]
+    (->> (partition-all n coll)
+         (mapcat (partial take (dec n)))))
+  )
 
 (defn -main []
   (are [soln] soln

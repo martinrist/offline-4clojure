@@ -6,6 +6,7 @@
   (:use clojure.test))
 
 (def __
+  (comp first reverse)
 ;; your solution here
 )
 

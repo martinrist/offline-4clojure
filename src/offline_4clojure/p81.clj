@@ -6,7 +6,8 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  (fn [s1 s2]
+    (into #{} (filter s2 s1)))
 )
 
 (defn -main []

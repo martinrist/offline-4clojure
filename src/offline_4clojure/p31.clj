@@ -6,6 +6,7 @@
   (:use clojure.test))
 
 (def __
+  (partial partition-by identity)
 ;; your solution here
 )
 

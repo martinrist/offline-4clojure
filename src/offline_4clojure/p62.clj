@@ -6,7 +6,11 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+
+  (fn my-iterate
+    [f x]
+    (lazy-seq
+      (cons x (my-iterate f (f x)))))
 )
 
 (defn -main []

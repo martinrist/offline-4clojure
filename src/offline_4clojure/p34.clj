@@ -6,7 +6,9 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  (fn [x y]
+    (take (- y x)
+          (iterate inc x)))
 )
 
 (defn -main []

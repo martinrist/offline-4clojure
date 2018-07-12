@@ -6,7 +6,8 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  (fn [f coll]
+    (apply merge-with concat (map #(hash-map (f %) [%]) coll)))
 )
 
 (defn -main []

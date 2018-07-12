@@ -6,6 +6,7 @@
   (:use clojure.test))
 
 (def __
+  #(into {} (map vector %1 %2))
 ;; your solution here
 )
 
